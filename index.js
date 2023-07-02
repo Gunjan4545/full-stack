@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/nidhi");
+mongoose.connect("mongodb+srv://bhaveshc1509:wQR7FVGPKIa0nP5d@cluster0.1ggifzf.mongodb.net/nidhi?retryWrites=true&w=majority");
 
 const express = require("express");
 const app = express();
