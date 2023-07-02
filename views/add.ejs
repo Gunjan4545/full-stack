@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nidhi Resturant</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="add.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+     
+        <div class="container">
+            <div class="content">
+           
+              <div class="right-side">
+                <div class="topic-text">Add new product<a href="/logout" style="text-decoration: none;text-align: center;color: #fff;font-size: 18px;outline: none;border: none; padding: 3px 16px; border-radius: 25px; background: #3e2093;cursor: pointer;transition: all 0.3s ease; float: right;margin-top: 5px;" 
+                  >Logout</a></div>
+              <form action="#" method="post" enctype="multipart/form-data">
+               
+                <div class="input-box">
+                  <input type="text" placeholder="Enter Price" name="price">
+                </div>
+                <div class="input-box message-box">
+                    <input type="text" placeholder="Enter your description" width="100px" name="desc">
+                  
+                </div>
+                <div class="input-box">
+                    <input type="file" name="image">
+                </div>
+
+                <div class="input-box">
+                  <label for="type">Type: </label>
+                  <select
+                  id="type"
+                  class="form-select"
+                  name="type"
+                  required
+                >
+                  <option selected>Jewellery</option>
+                  <option>Rukhawat</option>
+                  <option>Platters</option>
+                </select>
+                </div>
+                 <%
+        if(typeof message !=='undefined'){
+            %>
+            <p><%= message %></p>
+            <%
+        }
+        %>
+    
+                <div class="button">
+                  <input type="submit" value="Add" style="text-decoration: none;text-align: center;color: #fff;font-size: 18px;outline: none;border: none; padding: 3px 16px; border-radius: 25px; background: #3e2093;cursor: pointer;transition: all 0.3s ease; " > <a href="product " style="text-decoration: none;text-align: center;color: #fff;font-size: 18px;outline: none;border: none; padding: 3px 16px; border-radius: 25px; background: #3e2093;cursor: pointer;transition: all 0.3s ease; margin-left: 10px;" 
+                  >Product List</a>
+                </div>
+
+              </form>
+            </div>
+            </div>
+          </div>
+            
+        <script src="" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product.css">
+    <script src="https://kit.fontawesome.com/3477ae541c.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <button onclick="history.back()" class="exit"><img src="arrow.png" alt="" width="30px" height="30px"></button>
+    
+        <h3 class="headeing">Jewellery</h3>
+         <!--title--> 
+        <div class="menu-container">      <!--products-container--> 
+
+            <% Add.forEach((Add)=>{%>
+            <div class="menu" data-name="p-1">  <!--product--> 
+                <img src="Images/<%= Add.image%>"alt="">
+                <button>view</button>
+
+            </div>
+           
+        </div>
+    </div>
+
+   <div class="scroll"> 
+<div class="menu-preview" id="scroll">   <!--products-preview-->
+
+    <div class="preview" data-target="p-1">
+        <!-- <i class="fa-solid fa-xmark"></i> -->
+        <button class="close"><img src="close.png" alt="" ></button>
+       <img src="Images/<%= Add.image%>" alt="">
+       <div class="price">₹<%= Add.price%></div>
+       <p><%= Add.desc%></p>
+       
+
+    </div>
+      
+ 
+ </div>
+ 
+</div>
+<%} ) %>
+    <script src="script.js"></script>
+</body>
+</html>

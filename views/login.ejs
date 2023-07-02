@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>login</title>
+
+  <style>
+    .auth-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+  }
+  .form {
+    position: relative;
+    z-index: 1;
+    background:white;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  .form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+ 
+  .form .message {
+    margin: 15px 0 0;
+    color: black;
+    font-size: 12px;
+  }
+  </style>
+</head>
+
+<script>
+  function preback(){window.history.forward();}
+  setTimeout("preback()",0);
+  window.onunload=function(){null};
+</script>
+
+<body>
+  
+ 
+
+<div class="auth-page">
+  <div class="form">
+    <button onclick="history.back()" style="background-color: transparent;border: none;float: left;"><img src="arrow.png" alt="" width="30px" height="30px"></button>
+
+    <h1 style="margin-bottom: 10px;">Login</h1>
+     
+    
+    <form action="/login" method="post">
+    
+        <input type="text" name="username" required placeholder="Enter username">
+        
+        <input type="password" name="password"required placeholder="Enter password">
+        <div class="button">
+            <button type="submit" style="text-decoration: none;text-align: center;color: #fff;font-size: 18px;outline: none;border: none; padding: 10px 16px; border-radius: 25px; background: #3e2093;cursor: pointer;transition: all 0.3s ease; ">Login</button></div>
+       
+      
+        <%
+        if(typeof message !=='undefined'){
+            %>
+            <p><%= message %></p>
+            <%
+        }
+        %>
+    
+        <!-- <a href="/forget">Forget password</a> -->
+    
+    
+    </form>
+   
+  </div>
+</div>
+    
+
+
+</body>
+</html>
